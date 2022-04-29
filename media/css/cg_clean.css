@@ -1,0 +1,26 @@
+/* 
+ * @module		CG_Clean for Joomla 4.0
+ * @author		ConseilGouz
+ * @license		GNU General Public License version 2 or later
+ * Suite aux discussions https://forum.joomla.fr/node/1970249
+ * logique reprise depuis lm_memo https://lomart.fr/extensions/lm-memo
+ * version       2.0.1
+*/
+
+[id^="clean_btn"] {
+	float:right; 
+	margin:4px 5px 0;
+	padding:2px 5px;
+	border-radius:2px;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.2) inset;
+	font-size:1em;
+	font-weight:bold;
+	cursor:pointer;
+}
+[id^="clean_btn"]:hover{
+	text-shadow: 1px 1px 1px rgba(64,64,64,0.3);
+}
+
+@media (max-width:480px) {
+   	[id^="clean_btn"] { display:none;}
+}

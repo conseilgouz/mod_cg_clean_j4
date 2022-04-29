@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="module" method="upgrade" client="administrator">
+	<name>CG Clean</name>
+	<creationDate>October 2021</creationDate>
+	<author>conseilgouz</author>
+	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
+	<authorUrl>https://www.conseilgouz.com</authorUrl>
+	<copyright>2021 ConseilGouz</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.0.1</version>
+	<description>MOD_CG_CLEAN_XML_DESCRIPTION</description>
+	<namespace path="src">ConseilGouz\Module\CGClean</namespace>
+	<scriptfile>script.php</scriptfile>
+	<files>	
+		<filename module="mod_cg_clean">mod_cg_clean.php</filename>
+		<filename>index.html</filename>
+		<folder>services</folder>	
+		<folder>tmpl</folder>	
+		<folder>src</folder>	
+    </files>
+	<media destination="mod_cg_clean" folder="media">
+		<folder>css</folder>
+		<filename>index.html</filename>
+	</media>
+	<languages>
+		<language tag="en-GB">language/en-GB/mod_cg_clean.ini</language>
+		<language tag="eb-GB">language/en-GB/mod_cg_clean.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/mod_cg_clean.ini</language>
+		<language tag="fr-FR">language/fr-FR/mod_cg_clean.sys.ini</language>
+	</languages>
+	<changelogurl>https://www.conseilgouz.com/updates/mod_cg_clean_changelog.xml</changelogurl>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">			
+				<field type="note" name="note0" description="REMOVE_NOTE0" class="alert alert-success"/>			 
+				<field name="remove_beez" type="radio"
+					default="0"
+					description="REMOVE_BEEZ_DESC"
+					label="REMOVE_BEEZ_LABEL"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				<field name="remove_protostar" type="radio"
+					default="0"
+					description="REMOVE_PROTOSTAR_DESC"
+					label="REMOVE_PROTOSTAR_LABEL"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				<field name="remove_txt" type="radio"
+					default="0" 
+					description="REMOVE_TXT_DESC"
+					label="REMOVE_TXT_LABEL"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				<field type="note" name="note1" description="REMOVE_NOTE1" class="alert alert-success"/>			 
+				<field name="remove_file_list"
+					label="REMOVE_FILES_LABEL"
+					description="REMOVE_FILES_DESC"
+					size="30"
+					type="filelist"
+					exclude="index.php|configuration.php|.htaccess|robots.txt|web.config$"
+					hide_default="true"
+					hide_none="true" 
+					multiple="true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+	<server type="extension" name="mod_cg_clean" priority="1">	https://www.conseilgouz.com/updates/mod_cg_clean_update.xml
+	</server>
+	</updateservers>
+	
+</extension>

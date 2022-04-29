@@ -1,0 +1,24 @@
+<changelogs>
+	<changelog>
+		<element>mod_cg_clean</element>
+		<type>Module</type>
+		<version>2.0.1</version>
+        <note>
+            <item>Update : 14/12/2021</item>
+        </note>
+        <fix>
+            <item>Load JQuery</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>mod_cg_clean</element>
+		<type>Module</type>
+		<version>2.0.0</version>
+        <note>
+            <item>Update : 26/10/2021</item>
+        </note>
+        <addition>
+            <item>Joomla 4.0 compatibility</item>
+        </addition>
+	</changelog>
+</changelogs>
