@@ -33,7 +33,7 @@ return new class implements ServiceProviderInterface
 	 */
 	public function register(Container $container)
 	{
-		$container->registerServiceProvider(new ModuleDispatcherFactory(''));
+		$container->registerServiceProvider(new ModuleDispatcherFactory('\\ConseilGouz\\Module\\CGClean'));
 		$container->registerServiceProvider(new HelperFactory('\\ConseilGouz\\Module\\CGClean\\Administrator\\Helper'));
 
 		$container->registerServiceProvider(new Module);

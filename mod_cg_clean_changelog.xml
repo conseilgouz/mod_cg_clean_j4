@@ -2,6 +2,20 @@
 	<changelog>
 		<element>mod_cg_clean</element>
 		<type>Module</type>
+		<version>2.1.0</version>
+        <note>
+            <item>Update : 19/01/2025</item>
+        </note>
+        <change>
+            <item>Remove JQuery</item>
+            <item>Joomla 5.x/6.x compatibility</item>
+            <item>Update server on github</item>
+            <item>Dynamic module version number</item>
+        </change>
+	</changelog>
+	<changelog>
+		<element>mod_cg_clean</element>
+		<type>Module</type>
 		<version>2.0.1</version>
         <note>
             <item>Update : 14/12/2021</item>
