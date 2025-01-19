@@ -1,23 +1,23 @@
 <?php
 /**
-* CG Clean Module  - Joomla 4.0.0 Module 
-* Version			: 2.0.1
+* CG Clean Module  - Joomla 4.x/5.x Module 
 * Package			: CG Clean
-* copyright 		: Copyright (C) 2021 ConseilGouz. All rights reserved.
+* copyright 		: Copyright (C) 2025 ConseilGouz. All rights reserved.
 * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 */
 // No direct access to this file
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
-use Joomla\CMS\Filesystem\Folder;
 use Joomla\CMS\Version;
-use Joomla\CMS\Filesystem\File;
+use Joomla\Filesystem\File;
+use Joomla\Filesystem\Folder;
+use Joomla\Database\DatabaseInterface;
 
 class mod_cg_cleanInstallerScript
 {
 	private $min_joomla_version      = '4.0.0';
-	private $min_php_version         = '7.2';
+	private $min_php_version         = '8.0';
 	private $name                    = 'CG Clean';
 	private $exttype                 = 'module';
 	private $extname                 = 'cg_clean';
@@ -143,14 +143,14 @@ class mod_cg_cleanInstallerScript
 	}
 	private function uninstallInstaller()
 	{
-		if ( ! JFolder::exists(JPATH_PLUGINS . '/system/' . $this->installerName)) {
+		if ( ! is_dir(JPATH_PLUGINS . '/system/' . $this->installerName)) {
 			return;
 		}
 		$this->delete([
 			JPATH_PLUGINS . '/system/' . $this->installerName . '/language',
 			JPATH_PLUGINS . '/system/' . $this->installerName,
 		]);
-		$db = Factory::getDbo();
+		$db = Factory::getContainer()->get(DatabaseInterface::class);
 		$query = $db->getQuery(true)
 			->delete('#__extensions')
 			->where($db->quoteName('element') . ' = ' . $db->quote($this->installerName))
@@ -160,5 +160,17 @@ class mod_cg_cleanInstallerScript
 		$db->execute();
 		Factory::getCache()->clean('_system');
 	}
+    public function delete($files = [])
+    {
+        foreach ($files as $file) {
+            if (is_dir($file)) {
+                Folder::delete($file);
+            }
+
+            if (is_file($file)) {
+                File::delete($file);
+            }
+        }
+    }
 	
 }
