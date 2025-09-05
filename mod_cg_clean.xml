@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="4.0" type="module" method="upgrade" client="administrator">
 	<name>CG Clean</name>
-	<creationDate>2025-01-19</creationDate>
+	<creationDate>2025-09-05</creationDate>
 	<author>conseilgouz</author>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>https://www.conseilgouz.com</authorUrl>
 	<copyright>2025 ConseilGouz</copyright>
 	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
-	<version>2.1.0</version>
+	<version>2.2.0</version>
 	<description>MOD_CG_CLEAN_XML_DESCRIPTION</description>
 	<namespace path="src">ConseilGouz\Module\CGClean</namespace>
 	<scriptfile>script.php</scriptfile>
@@ -78,5 +78,4 @@
 	<updateservers>
 	<server type="extension" name="mod_cg_clean" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/mod_cg_clean_update.xml</server>
 	</updateservers>
-	
 </extension>
