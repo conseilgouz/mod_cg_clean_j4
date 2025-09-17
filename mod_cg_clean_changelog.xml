@@ -2,6 +2,17 @@
 	<changelog>
 		<element>mod_cg_clean</element>
 		<type>Module</type>
+		<version>2.2.1</version>
+        <note>
+            <item>Update : 17/09/2025</item>
+        </note>
+        <change>
+            <item>Use ConseilGouz library</item>
+        </change>
+	</changelog>
+	<changelog>
+		<element>mod_cg_clean</element>
+		<type>Module</type>
 		<version>2.2.0</version>
         <note>
             <item>Update : 05/09/2025</item>

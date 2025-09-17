@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="4.0" type="module" method="upgrade" client="administrator">
 	<name>CG Clean</name>
-	<creationDate>2025-09-05</creationDate>
+	<creationDate>2025-09-17</creationDate>
 	<author>conseilgouz</author>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>https://www.conseilgouz.com</authorUrl>
 	<copyright>2025 ConseilGouz</copyright>
 	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
-	<version>2.2.0</version>
+	<version>2.2.1</version>
 	<description>MOD_CG_CLEAN_XML_DESCRIPTION</description>
 	<namespace path="src">ConseilGouz\Module\CGClean</namespace>
 	<scriptfile>script.php</scriptfile>
@@ -31,7 +31,7 @@
 	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldprefix="ConseilGouz\Module\CGClean\Administrator\Field">
+			<fieldset name="basic" addfieldprefix="ConseilGouz\Library\Field">
 				<field name="version" type="version"  margintop="-3em"  extension="mod_cg_clean" />
 				<field type="note" name="note0" description="REMOVE_NOTE0" class="alert alert-success"/>
 				<field name="remove_beez" type="radio"
